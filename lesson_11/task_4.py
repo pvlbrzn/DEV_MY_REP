@@ -27,10 +27,13 @@ class Sphere:
         :param radius: радиус сферы
         :param x, y, z: координаты центра сферы
         """
-        self.radius = radius
         self.x = x
         self.y = y
         self.z = z
+        if radius > 0:
+            self.radius = radius
+        else:
+            print('Некорректное значение радиуса')
 
     def __str__(self):
         return (f"Сфера с радиусом: {self.radius}. Координаты центра сферы: "
@@ -52,15 +55,18 @@ class Sphere:
 
     def get_center(self) -> tuple:
         """Метод возвращает кортеж из координат центра сферы"""
-        return self.x, self.y, self.x
+        return self.x, self.y, self.z
 
     def set_radius(self, radius):
         """
         Метод для изменения радиуса сферы
         :param radius: Значение нового радиуса
         """
-        self.radius = radius
-        print(f'Радиус сферы изменен. Новый радиус равен {self.radius} см')
+        if radius > 0:
+            self.radius = radius
+            print(f'Радиус сферы изменен. Новый радиус равен {self.radius} см')
+        else:
+            print('Некорректное значение')
 
     def set_center(self, x, y, z):
         """Метод для изменения координат центра сферы"""
