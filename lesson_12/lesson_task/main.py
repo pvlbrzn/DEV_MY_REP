@@ -13,7 +13,8 @@ def main():
         print("4. Найти книги по автору")
         print("5. Взять книгу")
         print("6. Вернуть книгу")
-        print("7. Выход")
+        print("7. Состояние библиотеки (для Администратора)")
+        print("8. Выход")
 
         choice = input("Выберите действие: ")
 
@@ -63,6 +64,18 @@ def main():
                 print("Книга не была найдена среди занятых.")
 
         elif choice == "7":
+            admin_pass = input("Введите пароль Администратора: ")
+            if admin_pass == '12345':
+                books = library.list_all_books()
+                if books:
+                    for book in books:
+                        print(book)
+                else:
+                    print("Библиотека пустая")
+            else:
+                print('Неверный пароль')
+
+        elif choice == "8":
             library.save_to_file("library.json")
             print("Состояние библиотеки сохранено. До свидания!")
             break

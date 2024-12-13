@@ -7,8 +7,8 @@ class Book:
         self.author = author
         self.year = year
         self.book_id = book_id
-        self.is_available = True
-        self.user_book = None
+        self.is_available = True  # Status книги (свободна/занята)
+        self.user_book = None  # Пользователь книги
 
     def borrow(self, user):
         if self.is_available:
@@ -53,6 +53,10 @@ class Library:
         """Метод возвращает список доступных книг"""
         return [book for book in self.books if book.is_available]
 
+    def list_all_books(self):
+        """Метод возвращает список всех книг в библиотеке"""
+        return [book for book in self.books]
+
     def borrow_book(self, book_id, user):
         """Метод для получения пользователем книги из библиотеки"""
         for book in self.books:
@@ -81,6 +85,7 @@ class Library:
                 for book_data in data:
                     book = Book(book_data['title'], book_data['author'], book_data['year'], book_data['book_id'])
                     book.is_available = book_data['is_available']
+                    book.user_book = book_data['user_book']
                     self.books.append(book)
         except FileNotFoundError:
             pass

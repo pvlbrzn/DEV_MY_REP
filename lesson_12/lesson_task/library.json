@@ -1,18 +1,82 @@
 [
     {
-        "title": "1",
-        "author": "1",
-        "year": "1",
+        "title": "1984",
+        "author": "Джордж Оруэлл",
+        "year": "1949",
         "book_id": "1",
         "is_available": true,
         "user_book": null
     },
     {
-        "title": "2",
-        "author": "2",
-        "year": "2",
+        "title": "Мастер и Маргарита",
+        "author": "Михаил Булгаков",
+        "year": "1966",
         "book_id": "2",
         "is_available": false,
-        "user_book": "2"
+        "user_book": "Паша"
+    },
+    {
+        "title": "Война и мир",
+        "author": "Лев Толстой",
+        "year": "1869",
+        "book_id": "3",
+        "is_available": true,
+        "user_book": null
+    },
+    {
+        "title": "Отцы и Дети",
+        "author": "Иван Тургенев",
+        "year": "1862",
+        "book_id": "4",
+        "is_available": true,
+        "user_book": null
+    },
+    {
+        "title": "Преступление и наказание",
+        "author": "Федор Достоевский",
+        "year": "1866",
+        "book_id": "5",
+        "is_available": true,
+        "user_book": null
+    },
+    {
+        "title": "Анна Каренина",
+        "author": "Лев Толстой",
+        "year": "1877",
+        "book_id": "6",
+        "is_available": true,
+        "user_book": null
+    },
+    {
+        "title": "Унесенные ветром",
+        "author": "Маргарет Митчелл",
+        "year": "1936",
+        "book_id": "7",
+        "is_available": true,
+        "user_book": null
+    },
+    {
+        "title": "Три товарища",
+        "author": "Эрих Мария Ремарк",
+        "year": "1936",
+        "book_id": "8",
+        "is_available": true,
+        "user_book": null
+    },
+    {
+        "title": "Скотный двор",
+        "author": "Джордж Оруэлл",
+        "year": "1945",
+        "book_id": "9",
+        "is_available": true,
+        "user_book": null
+    },
+    {
+        "title": "Цветы для Элджернона",
+        "author": "Даниел Киз",
+        "year": "1966",
+        "book_id": "10",
+        "is_available": true,
+        "user_book": null
     }
 ]
