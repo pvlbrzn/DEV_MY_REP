@@ -30,12 +30,11 @@ def main():
             title = input("Введите название книги: ")
             author = input("Введите автора книги: ")
             year = input("Введите год издания книги: ")
-            book_id = input("Введите ID книги: ")
-            library.add_book(models.Book(title, author, year, book_id))
+            library.add_book(models.Book(title, author, year))
             print("Книга добавлена.")
 
         elif choice == "3":
-            book_id = input("Введите ID книги, которую нужно удалить: ")
+            book_id = int(input("Введите ID книги, которую нужно удалить: "))
             library.remove_book(book_id)
             print("Книга удалена, если она существовала.")
 
@@ -49,7 +48,7 @@ def main():
                 print("Книги этого автора не найдены.")
 
         elif choice == "5":
-            book_id = input("Введите ID книги, которую хотите взять: ")
+            book_id = int(input("Введите ID книги, которую хотите взять: "))
             user = input("Введите ваше имя: ")
             if library.borrow_book(book_id, user):
                 print("Книга успешно взята.")
@@ -57,7 +56,7 @@ def main():
                 print("Книга недоступна или не существует.")
 
         elif choice == "6":
-            book_id = input("Введите ID книги, которую хотите вернуть: ")
+            book_id = int(input("Введите ID книги, которую хотите вернуть: "))
             if library.return_book_in_lib(book_id):
                 print("Книга успешно возвращена.")
             else:

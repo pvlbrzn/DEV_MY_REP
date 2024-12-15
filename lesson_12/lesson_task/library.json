@@ -3,23 +3,23 @@
         "title": "1984",
         "author": "Джордж Оруэлл",
         "year": "1949",
-        "book_id": "1",
-        "is_available": true,
-        "user_book": null
+        "book_id": 1,
+        "is_available": false,
+        "user_book": "Кто-то"
     },
     {
         "title": "Мастер и Маргарита",
         "author": "Михаил Булгаков",
         "year": "1966",
-        "book_id": "2",
-        "is_available": false,
-        "user_book": "Паша"
+        "book_id": 2,
+        "is_available": true,
+        "user_book": null
     },
     {
         "title": "Война и мир",
         "author": "Лев Толстой",
         "year": "1869",
-        "book_id": "3",
+        "book_id": 3,
         "is_available": true,
         "user_book": null
     },
@@ -27,7 +27,7 @@
         "title": "Отцы и Дети",
         "author": "Иван Тургенев",
         "year": "1862",
-        "book_id": "4",
+        "book_id": 4,
         "is_available": true,
         "user_book": null
     },
@@ -35,7 +35,7 @@
         "title": "Преступление и наказание",
         "author": "Федор Достоевский",
         "year": "1866",
-        "book_id": "5",
+        "book_id": 5,
         "is_available": true,
         "user_book": null
     },
@@ -43,7 +43,7 @@
         "title": "Анна Каренина",
         "author": "Лев Толстой",
         "year": "1877",
-        "book_id": "6",
+        "book_id": 6,
         "is_available": true,
         "user_book": null
     },
@@ -51,7 +51,7 @@
         "title": "Унесенные ветром",
         "author": "Маргарет Митчелл",
         "year": "1936",
-        "book_id": "7",
+        "book_id": 7,
         "is_available": true,
         "user_book": null
     },
@@ -59,23 +59,23 @@
         "title": "Три товарища",
         "author": "Эрих Мария Ремарк",
         "year": "1936",
-        "book_id": "8",
-        "is_available": true,
-        "user_book": null
+        "book_id": 8,
+        "is_available": false,
+        "user_book": "Гена"
     },
     {
         "title": "Скотный двор",
         "author": "Джордж Оруэлл",
         "year": "1945",
-        "book_id": "9",
+        "book_id": 9,
         "is_available": true,
         "user_book": null
     },
     {
-        "title": "Цветы для Элджернона",
-        "author": "Даниел Киз",
-        "year": "1966",
-        "book_id": "10",
+        "title": "test",
+        "author": "test",
+        "year": "2024",
+        "book_id": 10,
         "is_available": true,
         "user_book": null
     }

@@ -2,11 +2,14 @@ import json
 
 
 class Book:
-    def __init__(self, title, author, year, book_id):
+    book_id = 1
+
+    def __init__(self, title, author, year):
         self.title = title
         self.author = author
         self.year = year
-        self.book_id = book_id
+        self.book_id = Book.book_id
+        Book.book_id += 1
         self.is_available = True  # Status книги (свободна/занята)
         self.user_book = None  # Пользователь книги
 
@@ -83,7 +86,8 @@ class Library:
                 data = json.load(file)
                 self.books = []
                 for book_data in data:
-                    book = Book(book_data['title'], book_data['author'], book_data['year'], book_data['book_id'])
+                    book = Book(book_data['title'], book_data['author'], book_data['year'])
+                    book.book_id = book_data['book_id']
                     book.is_available = book_data['is_available']
                     book.user_book = book_data['user_book']
                     self.books.append(book)
