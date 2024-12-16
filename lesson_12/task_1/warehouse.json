@@ -1,0 +1,26 @@
+[
+    {
+        "_Product__name": "Молоко",
+        "_Product__store": "Хит",
+        "_Product__cost": 1.5,
+        "prod_id": 0
+    },
+    {
+        "_Product__name": "Хлеб",
+        "_Product__store": "1",
+        "_Product__cost": 1.0,
+        "prod_id": 1
+    },
+    {
+        "_Product__name": "вода",
+        "_Product__store": "Евроопт",
+        "_Product__cost": 1.0,
+        "prod_id": 2
+    },
+    {
+        "_Product__name": "Батон",
+        "_Product__store": "Копеечка",
+        "_Product__cost": 2.5,
+        "prod_id": 3
+    }
+]
