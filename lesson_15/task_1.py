@@ -50,7 +50,9 @@ def populate_data():
     author1 = Author(first_name="Джордж", last_name="Оруэлл")
     author2 = Author(first_name="Рэй", last_name="Брэдбари")
     author3 = Author(first_name="Антон", last_name="Чехов")
-    session.add_all([author1, author2, author3])
+    author4 = Author(first_name="Адитья", last_name="Бхаргава")
+    author5 = Author(first_name="Лев", last_name="Толстой")
+    session.add_all([author1, author2, author3, author4, author5])
     session.commit()
 
     # Добавляем книги
@@ -58,7 +60,8 @@ def populate_data():
     book2 = Book(title="451 градус по Фарингейту", author_id=author2.id, publication_year=1953)
     book3 = Book(title="Преступление и наказание", author_id=author3.id, publication_year=1866)
     book4 = Book(title="1984", author_id=author1.id, publication_year=1948)
-    session.add_all([book1, book2, book3, book4])
+    book5 = Book(title="Грокаем алгоритмы", author_id=author4.id, publication_year=2023)
+    session.add_all([book1, book2, book3, book4, book5])
     session.commit()
 
     # Добавляем продажи
@@ -70,7 +73,7 @@ def populate_data():
     session.commit()
 
 
-populate_data()
+# populate_data()
 
 # INNER JOIN для получения списка всех книг и их авторов
 inner_join_books_authors = session.query(Book.title, Author.first_name, Author.last_name).join(Author).all()
@@ -81,7 +84,25 @@ left_join_authors_books = session.query(Author.first_name, Author.last_name, Boo
 # RIGHT JOIN для списка всех книг и их авторов
 right_join_books_authors = session.query(Book.title, Author.first_name, Author.last_name).outerjoin(Author).all()
 
+# INNER JOIN для связывания таблиц authors, books и sales
+inner_join_query = session.query(
+    Book.title,
+    Author.first_name,
+    Author.last_name,
+    Sale.quantity
+).join(Author).join(Sale).all()
+
+# LEFT JOIN для связывания таблиц authors, books и sales, чтобы получить список всех авторов, их книг
+# и продаж (включая авторов без книг и книги без продаж)
+left_join_query = session.query(
+    Author.first_name,
+    Author.last_name,
+    Book.title,
+    Sale.quantity
+).select_from(Author).join(Book, isouter=True).join(Sale, isouter=True).all()
 
 print("INNER JOIN (Books and Authors):", inner_join_books_authors)
 print("LEFT JOIN (Authors and Books):", left_join_authors_books)
 print("RIGHT JOIN (Books and Authors):", right_join_books_authors)
+print("INNER JOIN (Books, Authors and Sales):", inner_join_query)
+print("LEFT JOIN (Books, Authors and Sales):", left_join_query)
